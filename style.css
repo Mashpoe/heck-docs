@@ -1,0 +1,103 @@
+html, body {
+	height: 100%;
+	margin: 0px;
+}
+
+body {
+	color: #ccc;
+	background-color: #333;
+	font-family: arial;
+}
+
+#header {
+	background-color: #000;
+	height: 75px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+#header #title {
+	display: inline-block;
+	padding: 20px;
+	font-size: 30px;
+	color: #33aa90;
+}
+
+#header img {
+	max-height: 100%;
+	float: right;
+	box-sizing: border-box;
+	padding: 5px;
+}
+
+@media screen and (max-width: 550px) {
+	#header #title {
+		font-size: 20px;
+		padding-top: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+	}
+	#header img {
+		visibility: hidden;
+	}
+	#header {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	#header #title {
+		font-size: 15px;
+		padding-top: 30px;
+	}
+}
+
+#navbar {
+	font-size: 20px;
+	height: 50px;
+	background-color: #272727;
+	color: #ccc;
+	box-sizing: border-box;
+	border-bottom: 1px solid #555;
+	border-top: 1px solid #555;
+}
+
+#navbar a {
+	padding: 12px;
+	display: inline-block;
+	box-sizing: border-box;
+	height: 100%;
+	text-decoration: none;
+	color: inherit;
+}
+
+#navbar a:hover {
+	transition: 0.2s;
+	background-color: #555;
+}
+
+#content {
+	padding: 20px;
+}
+
+#content h1 {
+  color: #e646bd;
+  text-shadow: 1px 1px 2px #555;
+}
+
+.hljs {
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #111;
+  max-width: 600px;
+}
+
+#content li {
+	padding-bottom: 10px;
+}
+
+#content a:visited {
+    color: lightpink;
+}
+#content a {
+    color: lightblue;
+}

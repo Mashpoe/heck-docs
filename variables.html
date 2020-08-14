@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/railscasts.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="header">
+			<div id="title"><b><i>The Heck Programming Language</i></b></div>
+			<img src="assets/logo.png">
+		</div>
+		<div id="navbar">
+			<a href="index.html">Home</a><a href="about.html">About</a>
+		</div>
+    <div id="content">
+      <!-- enter code here  -->
+      <p>You can use let statements to create variables, but you need to specify the type in creation, either implicitly or explicitly.</p>
+      <div class="hljs">
+      <pre><span class="hljs-comment">// creates a variable with an implicit integer type</span><br><span class="hljs-keyword">let</span> x = <span class="hljs-number">3</span><br><br><span class="hljs-comment">// creates a variable with an explicit integer type</span><br><span class="hljs-keyword">let</span> y: <span class="hljs-keyword">int</span> = <span class="hljs-number">3</span></pre>
+      </div>
+      <p>You modify a variable via assignment:</p>
+      <div class="hljs">
+      <pre><span class="hljs-keyword">let</span> lel = <span class="hljs-number">3</span><br><br>lel = <span class="hljs-number">4</span></pre>
+      </div>
+      <p><a href="functions.html">Function</a> perameters are also variables, and can be given explicit types as well.</p>
+      <div class="hljs">
+      <pre><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">heck</span><span class="hljs-params">(a: <span class="hljs-keyword">int</span>, b: <span class="hljs-keyword">int</span>)</span></span> {<br>    <span class="hljs-comment">//code</span><br>}<br></pre>
+      </div>
+      <p>Variables can be declared with any <a href="datatypes.html">data type</a>.</p>
+      
+    </div>
+  </body>
+</html>
