@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/railscasts.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>Heck Docs</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -19,17 +19,458 @@
       <!-- enter code here  -->
       
       <h1>Expressions</h1>
-
+          
       <hr>
 
-      <h3>Expression Types:</h3>
+      <h3>Operators:</h3>
 
+      <!-- deadly_ore this is where the table goes -->
+      <p>Heck supports the operators that are common among the C-alike languages. Most of them can be <a href="classes.html">overloaded</a>.
+
+      <p>Here is a list of every operator in Heck, grouped in order of precedence:</p>
+
+      <p>1:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Syntax</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>++</td>
+            <td>postfix increment</td>
+            <td>a++</td>
+          </tr>
+          <tr>
+            <td>--</td>
+            <td>postfix decrement</td>
+            <td>a--</td>
+          </tr>
+          <tr>
+            <td>typeof()</td>
+            <td>type of</td>
+            <td>typeof(a)</td>
+          </tr>
+          <tr>
+            <td>()</td>
+            <td>function call</td>
+            <td>a(...)</td>
+          </tr>
+          <tr>
+            <td>[]</td>
+            <td>array subscripting</td>
+            <td>a[b]</td>
+          </tr>
+          <tr>
+            <td>?[]</td>
+            <td>null conditional array subscripting</td>
+            <td>a?[b]</td>
+          </tr>
+          <tr>
+            <td>.</td>
+            <td>member access</td>
+            <td>a.b</td>
+          </tr>
+          <tr>
+            <td>?.</td>
+            <td>null conditional member access</td>
+            <td>a?.b</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>2:</p>
+
+      <table>
+        <thead>
+          <th>Operator</th>
+          <th>Name</th>
+          <th>Syntax</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>++</td>
+            <td>prefix increment</td>
+            <td>++a</td>
+          </tr>
+          <tr>
+            <td>--</td>
+            <td>prefix decrement</td>
+            <td>--a</td>
+          </tr>
+          <tr>
+            <td>-</td>
+            <td>unary minus</td>
+            <td>-a</td>
+          </tr>
+          <tr>
+            <td>!</td>
+            <td>logical NOT</td>
+            <td>!a</td>
+          </tr>
+          <tr>
+            <td>~</td>
+            <td>bitwise NOT (one's complement)</td>
+            <td>~a</td>
+          </tr>
+          <tr>
+            <td>as</td>
+            <td>type cast</td>
+            <td>a as type</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>3:</p>
+
+      <table>
+        <thead>
+          <th>Operator</th>
+          <th>Name</th>
+          <th>Syntax</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>*</td>
+            <td>multiplication</td>
+            <td>a * b</td>
+          </tr>
+          <tr>
+            <td>/</td>
+            <td>division</td>
+            <td>a / b</td>
+          </tr>
+          <tr>
+            <td>%</td>
+            <td>modulo (remainder)</td>
+            <td>a % b</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>4:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Syntax</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>+</td>
+            <td>addition</td>
+            <td>a + b</td>
+          </tr>
+          <tr>
+            <td>-</td>
+            <td>subtraction</td>
+            <td>a - b</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>5:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Syntax</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><<</td>
+            <td>bitwise left shift</td>
+            <td>a << b</td>
+          </tr>
+          <tr>
+            <td>>></td>
+            <td>bitwise right shift</td>
+            <td>a >> b</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>6:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Syntax</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&</td>
+            <td>bitwise AND</td>
+            <td>a & b</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>7:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Syntax</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>^</td>
+            <td>bitwise XOR</td>
+            <td>a ^ b</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>8:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Syntax</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>|</td>
+            <td>bitwise OR (inclusive or)</td>
+            <td>a | b</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>9:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Syntax</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><</td>
+            <td>less than</td>
+            <td>a < b</td>
+          </tr>
+          <tr>
+            <td><=</td>
+            <td>less than or equal to</td>
+            <td>a <= b</td>
+          </tr>
+          <tr>
+            <td>></td>
+            <td>greater than</td>
+            <td>a > b</td>
+          </tr>
+          <tr>
+            <td>>=</td>
+            <td>greater than or equal to</td>
+            <td>a >= b</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>10:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Syntax</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>==</td>
+            <td>equal to</td>
+            <td>a == b</td>
+          </tr>
+          <tr>
+            <td>!=</td>
+            <td>not equal to</td>
+            <td>a != b</td>
+          </tr>
+        </thead>
+      </table>
+
+      <p>11:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Syntax</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&&</td>
+            <td>logical AND</td>
+            <td>a && b</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>12:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>syntax</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>^^</td>
+            <td>logical XOR</td>
+            <td>a ^^ b</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>13:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Syntax</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>||</td>
+            <td>logical OR</td>
+            <td>a || b</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>14:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Syntax</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>?:</td>
+            <td>ternary conditional</td>
+            <td>a ? b : c</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>15:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Syntax</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>=</td>
+            <td>direct assignment</td>
+            <td>a = b</td>
+          </tr>
+          <tr>
+            <td>+=</td>
+            <td>assignment by sum</td>
+            <td>a += b</td>
+          </tr>
+          <tr>
+            <td>-=</td>
+            <td>assignment by difference</td>
+            <td>a -= b</td>
+          </tr>
+          <tr>
+            <td>*=</td>
+            <td>assignment by product</td>
+            <td>a *= b</td>
+          </tr>
+          <tr>
+            <td>/=</td>
+            <td>assignment by quotient</td>
+            <td>a /= b</td>
+          </tr>
+          <tr>
+            <td>%=</td>
+            <td>assignment by remainder</td>
+            <td>a %= b</td>
+          </tr>
+          <tr>
+            <td><<=</td>
+            <td>assignment by bitwise left shift</td>
+            <td>a <<= b</td>
+          </tr>
+          <tr>
+            <td>>>=</td>
+            <td>assignment by bitwise right shift</td>
+            <td>a >>= b</td>
+          </tr>
+          <tr>
+            <td>&=</td>
+            <td>assignment by bitwise AND</td>
+            <td>a &= b</td>
+          </tr>
+          <tr>
+            <td>^=</td>
+            <td>assignment by bitwise XOR</td>
+            <td>a ^= b</td>
+          </tr>
+          <tr>
+            <td>|=</td>
+            <td>assignment by bitwise OR</td>
+            <td>a |= b</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>*Note: In Heck, the bitwise operators & ^ and | have higher precedence than the equality operators. This is different from the precedence order in C and C++ among other languages, which has been subject to criticism because it basically forces the user to put parentheses around bitwise operations in order to make any useful comparisons.</p>
+            
       <ul>
         <li>
           Addition (+)
         </li>
         <li>
           Subtraction (-)
+        </li>
+        <li>
+          <a href="typecasting.html">Type Casting (as)</a>
         </li>
     </div>
   </body>

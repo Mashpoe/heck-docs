@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/railscasts.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>Heck Docs</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -17,14 +17,59 @@
 		</div>
     <div id="content">
       <!-- enter code here  -->
-      
-      Example:
-      <br>
-      <br>
-      <div class="hljs">
-<pre><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">lol</span><span class="hljs-params">()</span></span> {<br>    <span class="hljs-keyword">return</span> the slab<br>}<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">lol</span><span class="hljs-params">(a: <span class="hljs-keyword">int</span>, b: <span class="hljs-keyword">int</span>)</span></span> {<br>    <span class="hljs-keyword">return</span> a + b<br>}<br><br><span class="hljs-built_in">print</span>(<span class="hljs-string">"the sum is "</span>, lol(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>))</pre>
-</div>
+      <h1>Functions</h1>
 
+      <hr>
+
+      <p>Functions are blocks of code that can be run elsewhere multiple times, and can return values</p>
+
+      <div class="hljs">
+      <pre><span class="hljs-comment">// a function being created</span><br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">lol</span><span class="hljs-params">()</span></span> {<br>    <span class="hljs-comment">// code</span><br>}<br><br><span class="hljs-comment">// calling that function</span><br><br>lol()</pre>
+      </div>
+
+      <p>Function parameters have the same syntax as <a href="variables.html">variable</a> declarations.</p>
+
+      <div class="hljs">
+      <pre><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">test</span><span class="hljs-params">(a, b)</span></span> {<br>    <span class="hljs-comment">// code</span><br>}</pre>
+      </div>
+
+      <p>You can give function perameters different types. (as seen in <a href="variables.html">variables</a>)</p>
+
+      <p>You return values like this:</p>
+
+      <div class="hljs">
+      <pre><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">add</span><span class="hljs-params">(a: <span class="hljs-keyword">int</span>, b: <span class="hljs-keyword">int</span>)</span></span> {<br>    <span class="hljs-keyword">return</span> a + b<br>}<br><br>add(<span class="hljs-number">10</span>, <span class="hljs-number">5</span>)</pre>
+      </div>
+
+      <p>This isn't required with all functions, but you can return an explicit data type like this:</p>
+
+      <div class="hljs">
+      <pre><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">add</span><span class="hljs-params">(a: <span class="hljs-keyword">int</span>, b: <span class="hljs-keyword">int</span>)</span> -&gt; <span class="hljs-title">int</span></span> {<br>    <span class="hljs-keyword">return</span> a + b<br>}<br><br>add(<span class="hljs-number">5</span>, <span class="hljs-number">7</span>)</pre>
+      </div>
+
+      <p>Function overloading allows you to create multiple functions with the same name, but they need different perameters to distinct the function calls.</p>
+
+      <div class="hljs">
+      <pre><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">add</span><span class="hljs-params">(a: <span class="hljs-keyword">int</span>, b: <span class="hljs-keyword">int</span>)</span></span> {<br>   <span class="hljs-keyword">return</span> a + b<br>}<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">add</span><span class="hljs-params">(a: <span class="hljs-keyword">float</span>, b: <span class="hljs-keyword">float</span>)</span></span> {<br>    <span class="hljs-keyword">return</span> a + b<br>}<br><br><span class="hljs-comment">// calling the int function</span><br>add(<span class="hljs-number">4</span>, <span class="hljs-number">6</span>)<br><br><span class="hljs-comment">// calling the float function</span><br>add(<span class="hljs-number">1.0</span>, <span class="hljs-number">2.3</span>)</pre>
+      </div>
+
+      <p>Generic functions are functions with not specified perameters. This allows functions to assume types.</p>
+
+      <div class="hljs">
+      <pre><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">add</span><span class="hljs-params">(a, b)</span></span> {<br>    <span class="hljs-keyword">return</span> a + b<br>}<br><br><span class="hljs-comment">// calls the function as an int</span><br>add(<span class="hljs-number">2</span>, <span class="hljs-number">5</span>)<br><br><span class="hljs-comment">// calls the function as a float</span><br>add(<span class="hljs-number">0.4</span>, <span class="hljs-number">2.0</span>)</pre>
+      </div>
+
+      <p>Function overloading takes priority over generic functions.</p>
+
+      <div class="hljs">
+      <pre><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">add</span><span class="hljs-params">(a, b)</span></span> {<br>    <span class="hljs-keyword">return</span> a + b<br>}<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">add</span><span class="hljs-params">(a: <span class="hljs-keyword">int</span>, b: <span class="hljs-keyword">int</span>)</span></span> {<br>    <span class="hljs-keyword">return</span> a + b<br>}<br><br><span class="hljs-comment">// calls the second function</span><br>add(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)<br><br><span class="hljs-comment">// calls the first function with a different data type</span><br>add(<span class="hljs-number">1.0</span>, <span class="hljs-number">3.5</span>)</pre>
+      </div>
+
+      <p>External declerations allow you to declare a function without the function body.</p>
+
+      <div class="hljs">
+      <pre><span class="hljs-title"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span> {<br>    <span class="hljs-keyword">let</span> value: <span class="hljs-keyword">int</span> = <span class="hljs-number">0</span><br>    <span class="hljs-comment">// function is declared her but defined elsewhere</span><br>    <span class="hljs-comment">// this makes the class definition easier to read</span><br>    <span class="hljs-keyword">extern</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">printValue</span><span class="hljs-params">()</span></span><br>}<br><br><span class="hljs-comment">// the function definition that coincides with the extern declaration</span><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">Foo<span class="hljs-title">.printValue</span></span><span class="hljs-params">()</span></span> {<br>    <span class="hljs-built_in">print</span>(value)<br>}<br><br><span class="hljs-keyword">let</span> myFoo = Foo() <span class="hljs-comment">// creates "Foo" object</span><br>myFoo.printValue() <span class="hljs-comment">// prints 0</span></pre>
+      </div>
     </div>
   </body>
 </html>

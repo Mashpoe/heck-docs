@@ -101,3 +101,16 @@ body {
 #content a {
     color: lightblue;
 }
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #fff;
+  padding: 10px;
+}
+
+thead {
+  background-color: #272727;
+}

@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/railscasts.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>Heck Docs</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -17,9 +17,34 @@
 		</div>
     <div id="content">
       <!-- enter code here  -->
+      <h1>If Statements</h1>
+
+      <hr>
+
+      <p>If statements allow conditional branching in your code, and work identically to if statements in most other programming languages. If the result of an if statement's condition expression is true, the corresponding block of code is executed:</p>
 
       <div class="hljs">
-      <pre><span class="hljs-keyword">let</span> x = <span class="hljs-number">7</span><br><br><span class="hljs-keyword">if</span> (x == <span class="hljs-number">7</span>) {<br>    x = <span class="hljs-number">8</span><br>} <span class="hljs-keyword">else</span> {<br>    x = <span class="hljs-number">7</span><br>}</pre>
+      <pre><span class="hljs-keyword">if</span> condition <span class="hljs-comment">/* (expression) */</span> {<br>    <span class="hljs-comment">// code</span><br>}</pre>
+      </div>
+
+      <p>If statements can also include an else block, which executes if the result of the condition is false:</p>
+
+      <div class="hljs">
+      <pre><span class="hljs-keyword">if</span> condition <span class="hljs-comment">/* (expression) */</span> {<br>    <span class="hljs-comment">// code</span><br>} <span class="hljs-keyword">else</span> {<br>    <span class="hljs-comment">// other code</span><br>}</pre>
+      </div>
+
+      <p>Additionally, if statements can include an arbitrary number of else-if blocks. If the result of the preceding condition is false, then the condition of the else-if block will be checked and the corresponding block of code will be executed accordingly:</p>
+
+      <div class="hljs">
+      <pre><span class="hljs-keyword">if</span> condition1 <span class="hljs-comment">/* (expression) */</span> {<br>    <span class="hljs-comment">// code</span><br>} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> condition2 <span class="hljs-comment">/* (expression) */</span> {<br>    <span class="hljs-comment">// code</span><br>} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> condition3 <span class="hljs-comment">/* (expression) */</span> {<br>    <span class="hljs-comment">// code</span><br>}</pre>
+      </div>
+
+      <p>This is known as an "if-else ladder."</p>
+
+      <p>If-else ladders can also end with an else block:</p>
+
+      <div class="hljs">
+      <pre><span class="hljs-keyword">if</span> condition1 <span class="hljs-comment">/* (expression) */</span> {<br>    <span class="hljs-comment">// code</span><br>} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> condition2 <span class="hljs-comment">/* (expression) */</span> {<br>    <span class="hljs-comment">// code</span><br>} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> condition3 <span class="hljs-comment">/* (expression) */</span> {<br>    <span class="hljs-comment">// code</span><br>} <span class="hljs-keyword">else</span> {<br>    <span class="hljs-comment">// code</span><br>}</pre>
       </div>
       
     </div>

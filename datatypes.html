@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/railscasts.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>Heck Docs</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -17,14 +17,59 @@
 		</div>
     <div id="content">
       <!-- enter code here  -->
+      <h1>Data Types</h1>
+
+      <hr>
+      
       <p>Different data types can do different things. Some primitive data types include:</p>
+
       <div class="hljs">
-      <pre><span class="hljs-comment">//integer</span><br><span class="hljs-keyword">let</span> x: <span class="hljs-keyword">int</span> = <span class="hljs-number">4</span><br><br><span class="hljs-comment">//string</span><br><span class="hljs-keyword">let</span> y: <span class="hljs-keyword">string</span> = <span class="hljs-string">"Hello, World!"</span><br><br><span class="hljs-comment">//float</span><br><span class="hljs-keyword">let</span> z: <span class="hljs-keyword">float</span> = <span class="hljs-number">0.3</span></pre>
+      <pre><span class="hljs-comment">// integer</span><br><span class="hljs-keyword">let</span> x: <span class="hljs-keyword">int</span> = <span class="hljs-number">4</span><br><br><span class="hljs-comment">// string</span><br><span class="hljs-keyword">let</span> y: <span class="hljs-keyword">string</span> = <span class="hljs-string">"Hello, World!"</span><br><br><span class="hljs-comment">// float</span><br><span class="hljs-keyword">let</span> z: <span class="hljs-keyword">float</span> = <span class="hljs-number">0.3</span></pre>
       </div>
+
       <p>Heck is statically-typed, so data types cannot be changed:</p>
       <div class="hljs">
       <pre><span class="hljs-keyword">let</span> x = <span class="hljs-string">""</span><br><br>x = <span class="hljs-number">2</span></pre>
       </div>
-      <p>
+
+      <p>Heck uses type inference, which allows the language to deduce data types in certain situations.</p>
+
+      <hr>
+
+      <h3>Data Types:</h3>
+
+      <hr>
+
+      <p>Integers store a positive or negative whole number.</p>
+
+      <div class="hljs">
+      <pre><span class="hljs-keyword">let</span> x: <span class="hljs-keyword">int</span> = <span class="hljs-number">3</span><br><br>x = x + <span class="hljs-number">1</span></pre>
+      </div>
+
+      <p>Floats can store positive and negative decimal values.</p>
+
+      <div class="hljs">
+      <pre><span class="hljs-keyword">let</span> x: <span class="hljs-keyword">float</span> = <span class="hljs-number">1.0</span><br><br>x = x + <span class="hljs-number">3.2</span></pre>
+      </div>
+
+      <p>Bools can store true or false data.</p>
+
+      <div class="hljs">
+      <pre><span class="hljs-keyword">let</span> x: <span class="hljs-keyword">bool</span> = <span class="hljs-literal">true</span><br><br>x = <span class="hljs-literal">false</span></pre>
+      </div>
+
+      <p>Strings can store bits of text. You cannot do math with number strings.</p>
+
+      <div class="hljs">
+      <pre><span class="hljs-keyword">let</span> x: <span class="hljs-keyword">string</span> = <span class="hljs-string">""</span><br><br>x = <span class="hljs-string">"Hello, World!"</span></pre>
+      </div>
+
+      <p>Class types are used to create objects, which are instances of <a href="classes.html">classes</a></p>
+
+      <p>Callbacks can store a function to a variable</p>
+
+      <div class="hljs">
+      <pre><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">add</span><span class="hljs-params">(a: <span class="hljs-keyword">int</span>, b: <span class="hljs-keyword">int</span>)</span></span> {<br>    <span class="hljs-keyword">return</span> a + b<br>}<br><br><span class="hljs-keyword">let</span> x = add<br><br><span class="hljs-built_in">print</span>(x(<span class="hljs-number">4</span>, <span class="hljs-number">6</span>)) <span class="hljs-comment">//prints 10</span></pre>
+      </div>
   </body>
 </html>

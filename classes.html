@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/railscasts.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Heck Docs</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="header">
+			<div id="title"><b><i>The Heck Programming Language</i></b></div>
+			<img src="assets/logo.png">
+		</div>
+		<div id="navbar">
+			<a href="index.html">Home</a><a href="about.html">About</a>
+		</div>
+    <div id="content">
+      <!-- enter code here  -->      
+      <h1>Classes</h1>
+          
+      <hr>
+
+      <h3>Operator Overloading</h3>
+
+      <hr>
+
+      <p>Operator overloading extends the functionality for objects of a given class type.</p>
+
+      <p>Many operators can be overloaded, such as addition:</p>
+<!-- TODO: add list of operators that can be overloaded -->
+      <div class="hljs">
+<pre><span class="hljs-title"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span> {<br><br>    value: <span class="hljs-keyword">int</span><br>    <br>    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">Foo</span><span class="hljs-params">(val: <span class="hljs-keyword">int</span>)</span></span> {<br>        value = val<br>    }<br><br>    <span class="hljs-comment">// overload addition for two "Foo" objects</span><br>    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-keyword">operator</span>+<span class="hljs-params">(other: Foo)</span></span> {<br>        <span class="hljs-keyword">return</span> Foo(value + other.value)<br>    }<br>}<br><br><span class="hljs-keyword">let</span> foo = Foo(<span class="hljs-number">3</span>) + Foo(<span class="hljs-number">2</span>)<br><br><span class="hljs-built_in">print</span>(foo.value) <span class="hljs-comment">// prints 5</span></pre>
+</div>
+
+<p>In the example above, the addition (<code>+</code>) operator is overloaded to allow addition between two "Foo" objects. This creates a new "Foo" object whose value is the sum of the previous two objects' values.</p>
+
+<
+
+<p>Operator overloading can also be used to allow conversion between objects and other types. Using the "<code>as</code>" keyword instead of the "<code>operator</code>" keyword, 
+      
+    </div>
+  </body>
+</html>
